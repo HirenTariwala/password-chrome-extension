@@ -13,11 +13,9 @@ const generateString = (length) => {
 };
 
 
- var keymy = "loooo";
-  chrome.runtime.onInstalled.addListener(() => {
-  console.log("Chrome extension successfully installed!");
+let keymy = "loooo";
+chrome.runtime.onInstalled.addListener(() => {
   keymy = generateString(10);
-  console.log("key", keymy);
   chrome.storage.sync.set({secretKey : keymy}, () => {})
   return;
 });
