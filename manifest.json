@@ -1,0 +1,20 @@
+{
+  "name": "chrome-extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This is a chrome extension",
+  "icons": {
+    "16": "/images/favicon.png",
+    "32": "/images/favicon.png",
+    "48": "/images/favicon.png",
+    "128": "/images/favicon.png"
+  },
+  "action": {
+    "default_icon": "/images/favicon.png",
+    "default_popup": "password.html"
+  },
+  "permissions": ["storage", "downloads", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
